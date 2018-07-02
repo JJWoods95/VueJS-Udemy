@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="vue-dev.js"></script>
+    <title>VueJS Sandbox</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-on:input="changeTitle"/>
+        <p>{{title}}</p>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello, World!'
+        },
+        methods: {
+            changeTitle : function(event){
+                this.title = event.target.value;
+            }
+        }
+    });
+</script>
+</html>
